@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harry Singh DFW Rentals | Quality homes for rent in Dallas–Fort Worth</title>
+<meta name="description" content="Your next home starts here. Quality homes for rent across the DFW Metroplex from Harry Singh DFW Rentals.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#070708; --panel:#101012; --ivory:#f1ebdd; --muted:#a8a193;
+  --gold:#c9a24b; --gold-hi:#e6c777; --line:rgba(201,162,75,.35);
+  --gold-grad:linear-gradient(135deg,#9c7a2e,#e6c777 45%,#b58a35);
+  --serif:"Cinzel","Trajan Pro","Times New Roman",serif;
+  --sans:"Jost","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--black);color-scheme:dark}
+body{margin:0;background:var(--black);color:var(--ivory);font:300 1.08rem/1.7 var(--sans)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold-hi);outline-offset:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 1.25rem}
+header{position:sticky;top:0;z-index:10;background:rgba(7,7,8,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:.6rem;padding-bottom:.6rem}
+.brand{display:flex;align-items:center;gap:.8rem;text-decoration:none;font:500 1rem var(--serif);letter-spacing:.14em}
+.brand img{width:48px;height:48px;border-radius:50%}
+.brand small{display:block;color:var(--gold);font-size:.7rem;letter-spacing:.3em}
+nav a{margin-left:1.8rem;text-decoration:none;font:400 .85rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+nav a:hover,nav a.cta{color:var(--gold-hi)}
+.hero{position:relative}
+.hero img{display:block;width:100%;height:auto;min-height:220px;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:30%;background:linear-gradient(transparent,var(--black))}
+.intro{text-align:center;padding:2.5rem 0 1rem}
+.intro p{max-width:56ch;margin:0 auto 1.8rem;color:var(--muted);font-size:1.15rem}
+.btn{display:inline-block;border:1px solid var(--gold);background:var(--gold-grad);color:#14100a;font:500 .85rem var(--sans);letter-spacing:.24em;text-transform:uppercase;padding:1rem 2rem;text-decoration:none;cursor:pointer;border-radius:2px}
+.btn:hover{filter:brightness(1.12)}
+.btn.ghost{background:transparent;color:var(--gold-hi);margin-left:.6rem}
+.btn.ghost:hover{background:rgba(201,162,75,.12)}
+section{padding:4.5rem 0}
+h2{font:500 clamp(1.6rem,4vw,2.4rem)/1.2 var(--serif);letter-spacing:.12em;text-align:center;margin:0 0 .6rem;text-transform:uppercase}
+.rule{width:90px;height:1px;background:var(--gold-grad);margin:0 auto 2.2rem}
+.cities{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin-bottom:2.2rem}
+.cities button{font:400 .8rem var(--sans);letter-spacing:.2em;text-transform:uppercase;padding:.6rem 1.2rem;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;border-radius:2px}
+.cities button:hover{color:var(--ivory);border-color:var(--gold)}
+.cities button[aria-pressed="true"]{background:var(--gold-grad);color:#14100a;border-color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1.5rem}
+.card{background:var(--panel);border:1px solid var(--line);display:flex;flex-direction:column}
+.ph{aspect-ratio:3/2;background:radial-gradient(circle at 50% 120%,#2a2110,#0c0c0e 70%);display:grid;place-items:center;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph svg{width:90px;height:auto}
+.card .body{padding:1.3rem 1.4rem 1.6rem;display:flex;flex-direction:column;gap:.2rem;flex:1}
+.card h3{margin:0;font:500 1.15rem var(--serif);letter-spacing:.08em}
+.price{color:var(--gold-hi);font:500 1.35rem var(--sans)}
+.price small{font-size:.85rem;color:var(--muted);font-weight:300}
+.meta{color:var(--muted);font-size:.95rem}
+.card a{margin-top:1rem;color:var(--gold-hi);font:400 .8rem var(--sans);letter-spacing:.22em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--line);align-self:flex-start;padding-bottom:.2rem}
+.card a:hover{border-color:var(--gold-hi)}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted)}
+.points{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.points div{padding:2.4rem 1.6rem;text-align:center}
+.points div+div{border-left:1px solid var(--line)}
+.points h3{margin:0 0 .5rem;font:500 1.05rem var(--serif);letter-spacing:.16em;text-transform:uppercase;color:var(--gold-hi)}
+.points p{margin:0;color:var(--muted)}
+.contact{max-width:640px;margin:0 auto;border:1px solid var(--line);padding:2.6rem 2rem;background:var(--panel)}
+.contact>p{text-align:center;color:var(--muted);margin:0 0 2rem}
+form{display:grid;gap:1.2rem}
+label{display:grid;gap:.4rem;font:400 .78rem var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+input,select,textarea{font:300 1.05rem var(--sans);letter-spacing:0;text-transform:none;padding:.8rem .9rem;background:var(--black);color:var(--ivory);border:1px solid var(--line);border-radius:2px}
+input:focus,select:focus,textarea:focus{border-color:var(--gold-hi);outline:none}
+form .btn{justify-self:center;margin-top:.5rem}
+#note{text-align:center;color:var(--gold-hi);min-height:1.5rem}
+.social{display:flex;justify-content:center;flex-wrap:wrap;gap:.8rem;margin:1.2rem 0}
+.social a{display:inline-flex;align-items:center;gap:.6rem;padding:.65rem 1.2rem;border:1px solid var(--line);border-radius:2px;text-decoration:none;color:var(--gold-hi);font:400 .8rem var(--sans);letter-spacing:.2em;text-transform:uppercase}
+.social a:hover{background:rgba(201,162,75,.12);border-color:var(--gold)}
+.social svg{width:18px;height:18px;fill:currentColor}
+footer{border-top:1px solid var(--line);padding:3rem 0;text-align:center;color:var(--muted);font-size:.9rem}
+footer img{width:110px;height:110px;border-radius:50%;margin-bottom:1rem}
+@media (max-width:700px){
+  nav a:not(.cta){display:none}
+  .brand span{display:none}
+  .points div+div{border-left:0;border-top:1px solid var(--line)}
+  .btn.ghost{margin:.8rem 0 0}
+}
+@media (prefers-reduced-motion:no-preference){
+  .hero img{animation:fade 1.4s ease-out both}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="logo.png" alt=""><span>HARRY SINGH<small>DFW RENTALS</small></span></a>
+    <nav><a href="#listings">Homes</a><a href="#about">About</a><a class="cta" href="#contact">Inquire</a></nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero"><img src="banner.png" alt="Harry Singh DFW Rentals. Your next home starts here. Dallas skyline at night."></div>
+
+  <div class="intro wrap">
+    <p>Quality homes for rent across Dallas–Fort Worth. Browse what’s available, then message us to schedule a tour.</p>
+    <a class="btn" href="#listings">View available homes</a><a class="btn ghost" href="#contact">Message us</a>
+  </div>
+
+  <section id="listings" aria-labelledby="l-h">
+    <div class="wrap">
+      <h2 id="l-h">Available Homes</h2><div class="rule"></div>
+      <div class="cities" id="cities" role="group" aria-label="Filter by city"></div>
+      <div class="grid" id="grid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section id="about" aria-labelledby="a-h" style="padding-top:1rem">
+    <div class="wrap">
+      <h2 id="a-h" style="margin-bottom:2rem">The Harry Singh Standard</h2>
+      <div class="points">
+        <div><h3>Quality homes</h3><p>Well-kept properties in sought-after DFW neighborhoods.</p></div>
+        <div><h3>Metroplex coverage</h3><p>From Dallas and Fort Worth to Plano, Irving and Arlington.</p></div>
+        <div><h3>Easy inquiries</h3><p>Send a message about any home and we’ll get back to you.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="c-h">
+    <div class="wrap">
+      <h2 id="c-h">Inquire</h2><div class="rule"></div>
+      <div class="contact">
+        <p>Tell us what you’re looking for and we’ll be in touch.</p>
+        <form id="form">
+          <label>Your name<input name="name" required autocomplete="name"></label>
+          <label>Phone or email<input name="reach" required autocomplete="email"></label>
+          <label>City
+            <select name="city"><option>Any city</option><option>Dallas</option><option>Fort Worth</option><option>Plano</option><option>Arlington</option><option>Irving</option><option>Frisco</option></select>
+          </label>
+          <label>Message<textarea name="msg" rows="4" placeholder="Bedrooms, budget, move-in date, pets"></textarea></label>
+          <button class="btn" type="submit">Send inquiry</button>
+          <div id="note" role="status"></div>
+        </form>
+        <p style="margin:2rem 0 0">Prefer to message us directly? Find us on social.</p>
+        <div class="social">
+          <a href="https://www.instagram.com/harrydfwrentals/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.3 5.8a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2z"/></svg>Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=61595884869762" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8h2.7l.5-3.2h-3.2V8.7c0-.9.4-1.7 1.8-1.7h1.5V4.2S15.5 4 14.3 4C11.8 4 10.2 5.5 10.2 8.4v2.4H7.5V14h2.7v8h3.3z"/></svg>Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <img src="logo.png" alt="Harry Singh DFW Rentals logo">
+  <div class="social">
+    <a href="https://www.instagram.com/harrydfwrentals/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.3 5.8a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2z"/></svg>Instagram</a>
+    <a href="https://www.facebook.com/profile.php?id=61595884869762" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8h2.7l.5-3.2h-3.2V8.7c0-.9.4-1.7 1.8-1.7h1.5V4.2S15.5 4 14.3 4C11.8 4 10.2 5.5 10.2 8.4v2.4H7.5V14h2.7v8h3.3z"/></svg>Facebook</a>
+  </div>
+  <div>© <span id="yr"></span> Harry Singh DFW Rentals · Dallas–Fort Worth, Texas</div>
+  <div>Equal Housing Opportunity. We comply with the Fair Housing Act.</div>
+</footer>
+
+<script>
+/* ===== EDIT THESE ===== */
+var CONTACT_EMAIL = "harry@example.com"; // replace with Harry's real email
+/* Add a photo to any home with img:"homes/oak-cliff.jpg" (put files in a "homes" folder). */
+var HOMES = [
+  {name:"Oak Cliff Bungalow",    city:"Dallas",     beds:3, baths:2,   sqft:1450, rent:1895, img:""},
+  {name:"Bishop Arts Flat",      city:"Dallas",     beds:1, baths:1,   sqft:780,  rent:1425, img:""},
+  {name:"Near Southside Duplex", city:"Fort Worth", beds:2, baths:1,   sqft:1050, rent:1550, img:""},
+  {name:"Arlington Family Home", city:"Arlington",  beds:4, baths:2.5, sqft:2100, rent:2350, img:""},
+  {name:"Legacy Townhome",       city:"Plano",      beds:3, baths:2.5, sqft:1680, rent:2250, img:""},
+  {name:"Las Colinas Condo",     city:"Irving",     beds:2, baths:2,   sqft:1120, rent:1790, img:""}
+];
+/* ====================== */
+
+var cities = ["All"].concat(Array.from(new Set(HOMES.map(function(h){return h.city}))));
+var current = "All";
+var cityEl = document.getElementById("cities"), grid = document.getElementById("grid");
+var ICON = '<svg viewBox="0 0 120 80" fill="none" stroke="#c9a24b" stroke-width="2.5" aria-hidden="true"><path d="M10 42L60 8l50 34"/><path d="M22 36v36h76V36"/><rect x="52" y="48" width="16" height="24"/></svg>';
+function esc(s){return String(s).replace(/[&<>"]/g,function(m){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]})}
+
+function render(){
+  cityEl.innerHTML = "";
+  cities.forEach(function(c){
+    var b = document.createElement("button");
+    b.type = "button"; b.textContent = c;
+    b.setAttribute("aria-pressed", c === current);
+    b.onclick = function(){ current = c; render(); };
+    cityEl.appendChild(b);
+  });
+  var list = HOMES.filter(function(h){ return current === "All" || h.city === current; });
+  grid.innerHTML = list.length ? list.map(function(h){
+    var pic = h.img ? '<img src="'+esc(h.img)+'" alt="'+esc(h.name)+'" loading="lazy">' : ICON;
+    return '<article class="card"><div class="ph">'+pic+'</div><div class="body"><h3>'+esc(h.name)+'</h3>'+
+      '<span class="price">$'+h.rent.toLocaleString()+' <small>/ month</small></span>'+
+      '<span class="meta">'+esc(h.city)+', TX · '+h.beds+' bd · '+h.baths+' ba · '+h.sqft.toLocaleString()+' sq ft</span>'+
+      '<a href="#contact" data-city="'+esc(h.city)+'">Inquire about this home</a></div></article>';
+  }).join("") : '<p class="empty">No homes are listed in this city right now. Send an inquiry and we’ll let you know when one opens up.</p>';
+}
+render();
+
+grid.addEventListener("click", function(e){
+  var a = e.target.closest("a[data-city]");
+  if(a){ document.querySelector('select[name="city"]').value = a.dataset.city; }
+});
+document.getElementById("form").addEventListener("submit", function(e){
+  e.preventDefault();
+  var f = new FormData(e.target);
+  var body = "Name: "+f.get("name")+"\nContact: "+f.get("reach")+"\nCity: "+f.get("city")+"\n\n"+f.get("msg");
+  window.location.href = "mailto:"+CONTACT_EMAIL+"?subject="+encodeURIComponent("Rental inquiry from "+f.get("name"))+"&body="+encodeURIComponent(body);
+  document.getElementById("note").textContent = "Opening your email app to send the inquiry.";
+});
+document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
